@@ -1,0 +1,8 @@
+{{#if inDashboard}}
+    <a id="btn-add-gadget" class="btn disabled">{{t "Installed"}}</a>
+{{else}}
+    <a id="btn-add-gadget" class="btn btn-primary" data-aid="{{asset.id}}">{{t "Install"}}</a>
+    <div id="devices" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+{{/if}}
+
+
