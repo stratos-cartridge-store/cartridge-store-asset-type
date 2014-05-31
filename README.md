@@ -1,2 +1,2 @@
-Cartridge_Store
+cartridge-store-asset-type
 ===============
