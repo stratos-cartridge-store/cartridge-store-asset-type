@@ -1,0 +1,27 @@
+
+Installation
+============
+
+* Edit <ES_HOME>/repository/deployment/server/jaggeryapps/publisher/config/publisher-tenant.json as below
+	- "collections": ["gadgets", "sites", "ebooks", "cartridges"]
+
+* Copy <CARTRIDGE_STORE_ZIP>/MobileAppLifeCycle.xml into <ES_HOME>/repository/deployment/server/jaggeryapps/publisher/config/lifecycles/MobileAppLifeCycle.xml
+
+* Edit <ES_HOME>/repository/deployment/server/jaggeryapps/store/config/store-tenant.json as below
+	- "assets": ["gadget", "site", "ebook", "cartridge"],
+
+* Copy <CARTRIDGE_STORE_ZIP>/cartridges directory into <ES_HOME>/repository/deployment/server/jaggeryapps/store/extensions/assets
+
+* Copy <CARTRIDGE_STORE_ZIP>/cartridge.rxt into <ES_HOME>/repository/resources/rxts
+
+* Copy <CARTRIDGE_STORE_ZIP>/cartridge.json into <ES_HOME>/repository/deployment/server/jaggeryapps/publisher/config/ext/cartridge.json
+
+
+Usage
+=====
+
+* Go to https://localhost:9443/publisher
+* Login and create a Cartriges
+* Update the lifecycle states until it gets to published state
+* Login to the store and check the newly added cartridge
+
