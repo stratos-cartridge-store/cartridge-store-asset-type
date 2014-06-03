@@ -2,7 +2,7 @@
 <artifactType type="application/vnd.wso2-cartridge+xml" shortName="cartridge" singularLabel="Cartridge"
               pluralLabel="Cartridges"
               hasNamespace="false" iconSet="10">
-     <storagePath>/cartriges/@{overview_provider}/@{overview_name}/@{overview_version}</storagePath>
+     <storagePath>/cartridges/@{overview_provider}/@{overview_name}/@{overview_version}</storagePath>
     <nameAttribute>overview_name</nameAttribute>
     <ui>
         <list>
@@ -14,6 +14,9 @@
             </column>
            <column name="Version">
                 <data type="path" value="overview_version" href="@{storagePath}"/>
+            </column>
+            <column name="CartridgeArtifact">
+                <data type="path" value="overview_url" href="@{storagePath}"/>
             </column>
         </list>
     </ui>
@@ -32,33 +35,26 @@
                 <name>Version</name>
             </field>
             <field type="options">
-                <name label="Category">Orchestration Type</name>
+                <name label="Orchestration Type">category</name>
                 <values>
                     <value>Puppet</value>
                     <value>Chef</value>
                     <value>Docker</value>
-                    <value>VagranDocker</value>
+                    <value>Vagrant</value>
                 </values>
             </field>
-            <field type="options">
-                <name label="Platform">Strotos Support Version</name>
-                <values>
-                    <value>4.0.0-rc4</value>
-                    <value>4.0.0-rc4.1</value>
-                    <value>4.0.0-rc4.2</value>
-                </values>
+            
+            <field type="text" required="true" url="true">
+                <name>URL</name>
             </field>
             <field type="text-area" required="true">
                 <name>Description</name>
             </field>
             <field type="text">
-                <name>Document Link</name>
+                <name label="Document Link">document_link</name>
             </field>
   	    <field type="text">
-                <name>Publisher URL</name>
-            </field>
- 	    <field type="text" required="true" url="true">
-                <name>Cartridge Artifact</name>
+                <name label="Publisher URL">publisher</name>
             </field>
             <field type="text">
                 <name>Createdtime</name>
