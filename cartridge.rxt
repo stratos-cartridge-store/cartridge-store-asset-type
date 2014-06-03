@@ -2,7 +2,7 @@
 <artifactType type="application/vnd.wso2-cartridge+xml" shortName="cartridge" singularLabel="Cartridge"
               pluralLabel="Cartridges"
               hasNamespace="false" iconSet="10">
-     <storagePath>/cartriges/@{overview_provider}/@{overview_name}/@{overview_version}</storagePath>
+     <storagePath>/cartridges/@{overview_provider}/@{overview_name}/@{overview_version}</storagePath>
     <nameAttribute>overview_name</nameAttribute>
     <ui>
         <list>
@@ -14,6 +14,9 @@
             </column>
            <column name="Version">
                 <data type="path" value="overview_version" href="@{storagePath}"/>
+            </column>
+            <column name="CartridgeArtifact">
+                <data type="path" value="overview_url" href="@{storagePath}"/>
             </column>
         </list>
     </ui>
@@ -32,32 +35,46 @@
                 <name>Version</name>
             </field>
             <field type="options">
+<<<<<<< HEAD
                 <name label="Orchestration Type">Orchestration_Type</name>
+=======
+                <name label="Orchestration Type">category</name>
+>>>>>>> working
                 <values>
                     <value>Puppet</value>
                     <value>Chef</value>
                     <value>Docker</value>
-                    <value>VagranDocker</value>
+                    <value>Vagrant</value>
                 </values>
             </field>
+<<<<<<< HEAD
             <field type="options">
                 <name label="Strotos Support Version">Stratos_Support_Version</name>
                 <values>
                     <value>Stratos-4.0.0-rc3</value>
                     <value>Stratos-4.0.0-rc4</value>
                 </values>
+=======
+            
+            <field type="text" required="true" url="true">
+                <name>URL</name>
+>>>>>>> working
             </field>
             <field type="text-area" required="true">
                 <name>Description</name>
             </field>
             <field type="text">
-                <name>Document Link</name>
+                <name label="Document Link">document_link</name>
             </field>
   	    <field type="text">
+<<<<<<< HEAD
                 <name>Publisher URL</name>
             </field>
  	    <field type="text" required="true" url="true">
                 <name>URL</name>
+=======
+                <name label="Publisher URL">publisher</name>
+>>>>>>> working
             </field>
             <field type="text">
                 <name>Createdtime</name>

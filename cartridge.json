@@ -4,11 +4,15 @@
 
     "import": [
         "/modules/ext/scripts/rxt.importer.js",
+<<<<<<< HEAD
         "/modules/ext/scripts/form.exporter.js",
         "/modules/ext/scripts/asset.exporter.js",
         "/modules/ext/scripts/asset.action.save.js",
         "/modules/ext/scripts/asset.lifecycle.action.save.js",
         "/modules/ext/scripts/form.importer.js"],
+=======
+        "/modules/ext/scripts/form.exporter.js"],
+>>>>>>> working
 
     "fieldPropertyRules": [
         "overview.name:order=1",
@@ -18,10 +22,13 @@
         "overview.version:save=disabled"
     ],
 
+<<<<<<< HEAD
     "link": [
         "overview.stage:value=*.lifecycleState"
     ],
 
+=======
+>>>>>>> working
     "tables": [
 
         {
@@ -114,7 +121,8 @@
             "name": "lifeCycle",
             "table": "*",
             "label": "Life Cycle",
-            "value": "SampleLifeCycle2"
+            "value": "CartridgeLifeCycle"
+
         } ,
         {
             "name": "banner",
@@ -135,21 +143,37 @@
             "name": "description",
             "table": "overview",
             "value": "The provider has not given a description."
+        },
+	{
+            "name": "version",
+            "table": "overview",
+            "value": "Stratos-4.0.0-rc3"
         }
+
     ],
 
     "permissions": {
         "created": ["Internal/private_{overview_provider}"],
         "in-review": ["Internal/reviewer", "Internal/private_{overview_provider}"],
         "published": ["Internal/private_{overview_provider}"],
-        "unpublished": ["Internal/private_{overview_provider}"]
+        "unpublished": ["Internal/private_{overview_provider}"],
+	"approved":["Internal/private_{overview_provider}"],
+        "rejected":["Internal/private_{overview_provider}"],
+        "retired":["Internal/private_{overview_provider}"]
     },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> working
     "storage": {
 
         "images_banner": {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> working
             "lifecycle": {
                 "created": ["Internal/private_{overview_provider}"],
                 "in-review": ["Internal/reviewer", "Internal/private_{overview_provider}"],
