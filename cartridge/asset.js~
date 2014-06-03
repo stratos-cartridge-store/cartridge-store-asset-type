@@ -1,5 +1,5 @@
 var assetLinks = function (user) {
     return {
-        title: 'Apache Stratos Cartriges'
+        title: 'Apache Stratos Cartridges'
     };
 };
