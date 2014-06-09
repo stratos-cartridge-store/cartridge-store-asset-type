@@ -36,7 +36,8 @@ Usage
 
 
 -----------------------------------------------------------------------------------------
-sample[01]	
+sample[01]
+
 	# php cartridge node
 	node /php/ inherits base {
 	  $docroot = "/var/www/"
