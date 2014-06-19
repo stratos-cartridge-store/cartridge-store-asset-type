@@ -2,33 +2,26 @@
     "applyTo": "cartridge",
 
 
-    "import": [
+   "import": [
         "/modules/ext/scripts/rxt.importer.js",
-<<<<<<< HEAD
         "/modules/ext/scripts/form.exporter.js",
         "/modules/ext/scripts/asset.exporter.js",
         "/modules/ext/scripts/asset.action.save.js",
         "/modules/ext/scripts/asset.lifecycle.action.save.js",
         "/modules/ext/scripts/form.importer.js"],
-=======
-        "/modules/ext/scripts/form.exporter.js"],
->>>>>>> working
 
     "fieldPropertyRules": [
         "overview.name:order=1",
         "overview.provider:order=2",
         "overview.description:order=3",
         "overview.version:order=4",
-        "overview.version:save=disabled"
+	"overview.version:save=disabled"
     ],
 
-<<<<<<< HEAD
     "link": [
         "overview.stage:value=*.lifecycleState"
     ],
 
-=======
->>>>>>> working
     "tables": [
 
         {
@@ -113,6 +106,16 @@
             "field": "overview.description",
             "name": "value",
             "value": "provider has not given a description"
+        },
+	    {
+            "field": "overview.url",
+            "name": "downloadable",
+            "value": true
+        },
+	    {
+            "field": "overview.checksum",
+            "name": "hidden",
+            "value": "true"
         }
     ],
 
@@ -134,8 +137,8 @@
             "table": "images",
             "type": "file"
         },
- 	{
-            "name": "cartridge_artifact",
+        {
+            "name": "url",
             "table": "overview",
             "type": "file"
         },
@@ -144,10 +147,15 @@
             "table": "overview",
             "value": "The provider has not given a description."
         },
-	{
+	    {
             "name": "version",
             "table": "overview",
             "value": "Stratos-4.0.0-rc3"
+        },
+	    {
+            "name": "document",
+            "table": "overview",
+            "value": "The provider has not given a Reference."
         }
 
     ],
@@ -162,24 +170,16 @@
         "retired":["Internal/private_{overview_provider}"]
     },
 
-<<<<<<< HEAD
-=======
 
->>>>>>> working
     "storage": {
 
         "images_banner": {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> working
             "lifecycle": {
                 "created": ["Internal/private_{overview_provider}"],
                 "in-review": ["Internal/reviewer", "Internal/private_{overview_provider}"],
-                "published": ["Internal/everyone", "Internal/private_{overview_provider}", "Internal/reviewer", "anon"],
+                "published": ["Internal/everyone", "Internal/private_{overview_provider}", "Internal/reviewer"],
                 "unpublished": ["Internal/private_{overview_provider}"]
-
             }
         },
 
@@ -188,10 +188,9 @@
             "lifecycle": {
                 "created": ["Internal/private_{overview_provider}"],
                 "in-review": ["Internal/reviewer", "Internal/private_{overview_provider}"],
-                "published": ["Internal/everyone", "Internal/private_{overview_provider}", "Internal/reviewer", "anon"],
+                "published": ["Internal/everyone", "Internal/private_{overview_provider}", "Internal/reviewer"],
                 "unpublished": ["Internal/private_{overview_provider}"]
             }
-
         }
 
     },

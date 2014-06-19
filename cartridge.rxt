@@ -28,6 +28,9 @@
             <field type="text" required="true">
                 <name>Name</name>
             </field>
+            <field type="text" required="true">
+                <name label="Deployable Name">deployablename</name>
+            </field>
 	    <field type="text">
                 <name>Organization</name>
             </field>
@@ -47,11 +50,14 @@
             <field type="text" required="true" url="true">
                 <name>URL</name>
             </field>
+            <field type="text">
+                <name>Checksum</name>
+            </field>
             <field type="text-area" required="true">
                 <name>Description</name>
             </field>
             <field type="text">
-                <name label="Document Link">document_link</name>
+                <name label="Document Link">document</name>
             </field>
   	    <field type="text">
                 <name label="Publisher URL">publisher</name>
@@ -72,3 +78,4 @@
     </content>
 
 </artifactType>
+
